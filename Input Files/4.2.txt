@@ -1,0 +1,8 @@
+LI 0 1 #Load Core 0 to 1
+LI 1 2 #Load Core 1 to 2
+ST X 0 #Strore the  elements in ACCs to the both Core loc 0
+LI 0 3 #Load 3 to first Core
+LI 1 4 #Load 4 to Second COre
+AD X 0 #Add the each Core's Loc 0 elemens to ACCs
+ST X 1 #Store the results to Loc 1
+MV 1 1 2 #Move the addition result from Core 1to Core 0.

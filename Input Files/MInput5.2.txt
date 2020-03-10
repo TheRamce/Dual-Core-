@@ -1,0 +1,25 @@
+LI 0 2 # Load 2 to first core Accumulator
+ST 0 0 # Store 2 into first cores first place
+LI 0 3 # Load 3 to first core Accumulator
+ST 0 1 # Store 3 into first cores second place
+LI 1 4 # Load 4 to second core Accumulator
+ST 1 0 # Store 4 into first cores first place
+LI 1 5 # Load 5 to second core Accumulator
+ST 1 1 # Store 5 into first cores second place
+LI X 1 # Load 1 to both cores Accumulators 
+ST X 2 # Store 1 into both cores third place
+LI X 3 # Load 3 to both cores Accumulators
+ST X 3 # Store 3 into both cores fourth place
+LM 0 1 # Load from second memory of first core to Accumulator
+RL 0 1 # Multiply first cores Accumulator value by 2
+AD 0 1 # Add first cores second place to its Accumulator it is like multiply by 3 with above instruction
+AD 0 0 # Add first cores first place to its Accumulator
+ST 0 4 # Store the first cores Accumulator value into its fifth place
+LM 1 1 # Load second cores second place into its Accumulator
+RL 1 1 # Multiply second cores Accumulator value by 2
+AD 1 1 # Add second cores second place to its Accumulator it is like multiply by 3 with above instruction
+AD 1 0 # Add second cores first place to its Accumulator
+ST 1 4 # Store second cores Accumulator value into its fifth place
+MV 1 4 5 # Move fifth place of second core into first cores sixth place
+LI X 0 # Load both cores accumulator 0 to finish program
+BZ X 0 # Make branch on zero on both cores to finish program

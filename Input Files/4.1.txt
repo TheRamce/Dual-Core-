@@ -1,0 +1,7 @@
+ret EQ 0 #The memory place
+LI 5 #Places to be doubled
+ST 1 #Store 5 into memory
+AD 1 #Add 5 to 5
+ST ret #store the result to location 0
+LI 0 #load 0 to ACC
+BZ 0 #FÝnish the program.
